@@ -2,7 +2,7 @@ package ru.sbrf.cu.l02;
 
 import java.util.Scanner;
 
-public class Figures {
+public class FiguresOldWithoutOOP {
     public static void main (String[] args){
         Scanner scanner = new Scanner(System.in);
         String ft; // figure type
