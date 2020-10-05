@@ -18,13 +18,23 @@ public class Triangle extends Shape {
     }
 
     @Override
-    public void getPerimeter() {
-        System.out.println("Perimeter = " + this.perimeter);
+    void getInfo() {
+        System.out.println("[Triangle] Side A = " + this.sideA + ","
+                + " Side B = " + this.sideB + ","
+                + " Angle = " + this.angle + ","
+                + " Perimeter = " + this.perimeter + ","
+                + " Area = " + this.area
+        );
     }
 
     @Override
-    public void getArea() {
-        System.out.println("Area = " + this.area);
+    public double getPerimeter() {
+        return this.perimeter;
+    }
+
+    @Override
+    public double getArea() {
+        return this.area;
     }
 
     private void setPerimeter() {
@@ -34,6 +44,24 @@ public class Triangle extends Shape {
 
     private void setArea() {
         this.area = 0.5 * this.sideA * this.sideB * Math.sin(Math.toRadians(this.angle));
+    }
+
+    public void setSideA(double sideA) {
+        this.sideA = sideA;
+        setPerimeter();
+        setArea();
+    }
+
+    public void setSideB(double sideB) {
+        this.sideB = sideB;
+        setPerimeter();
+        setArea();
+    }
+
+    public void setAngle(double angle) {
+        this.angle = angle;
+        setPerimeter();
+        setArea();
     }
 
 }

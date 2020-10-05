@@ -9,7 +9,8 @@ public abstract class Shape {
 
     }
 
-    abstract void getPerimeter();
-    abstract void getArea();
+    abstract void getInfo();
+    abstract double getPerimeter();
+    abstract double getArea();
 
 }

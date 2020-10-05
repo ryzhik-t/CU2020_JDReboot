@@ -14,13 +14,21 @@ public class Square extends Shape {
     }
 
     @Override
-    public void getPerimeter() {
-        System.out.println("Perimeter = " + this.perimeter);
+    void getInfo() {
+        System.out.println("[Square] Side A = " + this.sideA + ","
+                + " Perimeter = " + this.perimeter + ","
+                + " Area = " + this.area
+        );
     }
 
     @Override
-    public void getArea() {
-        System.out.println("Area = " + this.area);
+    public double getPerimeter() {
+        return this.perimeter;
+    }
+
+    @Override
+    public double getArea() {
+        return this.area;
     }
 
     private void setPerimeter() {
@@ -30,4 +38,11 @@ public class Square extends Shape {
     private void setArea() {
         this.area = Math.pow(sideA, 2);
     }
+
+    public void setSideA(double sideA) {
+        this.sideA = sideA;
+        setPerimeter();
+        setArea();
+    }
+
 }
