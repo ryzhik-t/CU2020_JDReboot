@@ -1,4 +1,4 @@
-package ru.sbrf.cu.l02;
+package ru.sbrf.cu.l02.old;
 
 import java.util.Scanner;
 
