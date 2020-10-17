@@ -4,45 +4,34 @@ public class Square extends Shape {
 
     private double sideA;
 
-    private double perimeter;
-    private double area;
-
     public Square(double sideA) {
-        this.sideA = sideA;
-        setPerimeter();
-        setArea();
-    }
-
-    @Override
-    void getInfo() {
-        System.out.println("[Square] Side A = " + this.sideA + ","
-                + " Perimeter = " + this.perimeter + ","
-                + " Area = " + this.area
-        );
-    }
-
-    @Override
-    public double getPerimeter() {
-        return this.perimeter;
-    }
-
-    @Override
-    public double getArea() {
-        return this.area;
-    }
-
-    private void setPerimeter() {
-        this.perimeter = this.sideA * 4;
-    }
-
-    private void setArea() {
-        this.area = Math.pow(sideA, 2);
+        setSideA(sideA);
     }
 
     public void setSideA(double sideA) {
         this.sideA = sideA;
-        setPerimeter();
-        setArea();
+    }
+
+    public double getSideA() {
+        return this.sideA;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return getSideA() * 4;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.pow(getSideA(), 2);
+    }
+
+    @Override
+    void getInfo() {
+        System.out.println("[Square] Side A = " + getSideA() + ","
+                + " Perimeter = " + getPerimeter() + ","
+                + " Area = " + getArea()
+        );
     }
 
 }

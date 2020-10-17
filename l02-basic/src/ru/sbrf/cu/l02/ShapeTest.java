@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;
 
-public class TestShape {
+public class ShapeTest {
 
     public static void main(String[] args) {
 
