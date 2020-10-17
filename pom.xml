@@ -17,13 +17,12 @@
 
     <properties>
         <!-- region general -->
-        <java.version>8</java.version>
+        <java.version>14</java.version>
         <revision>CU2020-SNAPSHOT</revision>
         <minimal.maven.version>3.6.1</minimal.maven.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!--region plugins-->
-        <com.google.guava.version>28.2-jre</com.google.guava.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <maven.compiler.forceJavacCompilerUse>true</maven.compiler.forceJavacCompilerUse>
@@ -38,11 +37,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${com.google.guava.version}</version>
-            </dependency>
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-engine</artifactId>

@@ -6,62 +6,58 @@ public class Triangle extends Shape {
     private double sideB;
     private double angle;
 
-    private double perimeter;
-    private double area;
-
     public Triangle(double sideA, double sideB, double angle) {
-        this.sideA = sideA;
-        this.sideB = sideB;
-        this.angle = angle;
-        setPerimeter();
-        setArea();
-    }
-
-    @Override
-    void getInfo() {
-        System.out.println("[Triangle] Side A = " + this.sideA + ","
-                + " Side B = " + this.sideB + ","
-                + " Angle = " + this.angle + ","
-                + " Perimeter = " + this.perimeter + ","
-                + " Area = " + this.area
-        );
-    }
-
-    @Override
-    public double getPerimeter() {
-        return this.perimeter;
-    }
-
-    @Override
-    public double getArea() {
-        return this.area;
-    }
-
-    private void setPerimeter() {
-        this.perimeter = Math.sqrt(Math.pow(this.sideA, 2) + Math.pow(this.sideB, 2) - (2 * this.sideA * this.sideB * Math.cos(Math.toRadians(this.angle))))
-                + this.sideA + this.sideB;
-    }
-
-    private void setArea() {
-        this.area = 0.5 * this.sideA * this.sideB * Math.sin(Math.toRadians(this.angle));
+        setSideA(sideA);
+        setSideB(sideB);
+        setAngle(angle);
     }
 
     public void setSideA(double sideA) {
         this.sideA = sideA;
-        setPerimeter();
-        setArea();
     }
 
     public void setSideB(double sideB) {
         this.sideB = sideB;
-        setPerimeter();
-        setArea();
     }
 
     public void setAngle(double angle) {
         this.angle = angle;
-        setPerimeter();
-        setArea();
+    }
+
+    public double getSideA() {
+        return this.sideA;
+    }
+
+    public double getSideB() {
+        return this.sideB;
+    }
+
+    public double getAngle() {
+        return this.angle;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return Math.sqrt(
+                Math.pow(getSideA(), 2) + Math.pow(getSideB(), 2)
+                        - (2 * getSideA() * getSideB() * Math.cos(Math.toRadians(getAngle())))
+        )
+                + getSideA() + getSideB();
+    }
+
+    @Override
+    public double getArea() {
+        return 0.5 * getSideA() * getSideB() * Math.sin(Math.toRadians(getAngle()));
+    }
+
+    @Override
+    void getInfo() {
+        System.out.println("[Triangle] Side A = " + getSideA() + ","
+                + " Side B = " + getSideB() + ","
+                + " Angle = " + getAngle() + ","
+                + " Perimeter = " + getPerimeter() + ","
+                + " Area = " + getArea()
+        );
     }
 
 }

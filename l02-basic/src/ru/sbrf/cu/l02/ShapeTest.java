@@ -1,9 +1,10 @@
 package ru.sbrf.cu.l02;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
 import java.util.Scanner;
 
-public class TestShape {
+public class ShapeTest {
 
     public static void main(String[] args) {
 
@@ -50,18 +51,18 @@ public class TestShape {
         }
 
         switch (shapeType) {
-            case "s":
+            case "s" -> {
                 square = new Square(sideA);
                 square.getInfo();
-                break;
-            case "r":
+            }
+            case "r" -> {
                 rectangle = new Rectangle(sideA, sideB);
                 rectangle.getInfo();
-                break;
-            case "t":
+            }
+            case "t" -> {
                 triangle = new Triangle(sideA, sideB, angle);
                 triangle.getInfo();
-                break;
+            }
         }
 
     }
