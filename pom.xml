@@ -13,6 +13,7 @@
     <modules>
         <module>l01-helloworld</module>
         <module>l02-basic</module>
+        <module>l06-sample</module>
     </modules>
 
     <properties>
@@ -37,10 +38,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-engine</artifactId>
-                <version>5.6.2</version>
+                <version>5.7.0</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
